@@ -79,7 +79,7 @@ namespace PixelBoxGen
             }
         }
 
-        void Gen(ColliderImage item)
+        public static void Gen(ColliderImage item)
         {
             if (item.points != null && item.Collider != null)
             {
@@ -102,7 +102,7 @@ namespace PixelBoxGen
                 item.Collider.pathCount = cache_points.Length;
                 for (int i = 0; i < cache_points.Length; i++)
                 {
-                    item.Collider.SetPath(i, cache_points[i].ToArray());
+                    item.Collider.SetPath(i, cache_points[i]);
                 }
             }
         }
